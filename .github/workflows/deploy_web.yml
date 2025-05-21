@@ -25,4 +25,4 @@ jobs:
           context: .
           file: ./docker/Dockerfile.web
           push: true
-          tags: gigax01/web-frontend:latest
+          tags: gigax01/web-frontend:${{ github.sha }}

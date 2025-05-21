@@ -23,4 +23,4 @@ jobs:
           context: .
           file: ./docker/Dockerfile.backend
           push: true
-          tags: gigax01/backend-service:latest
+          tags: gigax01/backend-service:${{ github.sha }}
