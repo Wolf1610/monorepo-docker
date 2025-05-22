@@ -29,4 +29,4 @@ jobs:
         run: |
           echo "${{ secrets.SSH_PRIVATE_KEY }}" &> ~/ssh_key
           chmod 700 /home/runner/ssh_key
-          ssh -o StrictHostKeyChecking=no -i ~/ssh_key ubuntu@3.110.127.205 -t "docker pull gigax01/backend-service:${{ github.sha }} && docker stop user_backend && docker run --name user_backend_service -d -p 8080:8080 gigax01/backend-service:${{ github.sha }}"
+          ssh -o StrictHostKeyChecking=no -i ~/ssh_key ubuntu@3.110.127.205 -t "docker pull gigax01/backend-service:${{ github.sha }} && docker stop user_backend && docker run --name user_backend_service1 -d -p 8080:8080 gigax01/backend-service:${{ github.sha }}"
